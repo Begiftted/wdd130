@@ -16,8 +16,6 @@ max-width: 840px;
 main img{
     width: 150px;
     height: auto;
-    border: 1px solid steelblue;
-    box-shadow: 0 0 30px gray;
 }
 
 p{
