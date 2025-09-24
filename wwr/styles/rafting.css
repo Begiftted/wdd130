@@ -1,0 +1,206 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  flex-direction: column;   /* stack logo and nav vertically */
+  align-items: flex-start;  /* align left */
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  gap: 1rem;
+}
+
+.site-logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* let nav wrap on small screens */
+  padding-left: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #002b5b;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Semi-transparent navy heading bar */
+.hero-heading {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  background: rgba(0, 43, 91, 0.8); /* semi-transparent navy */
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 2;
+}
+
+/* Mission article block */
+.hero-article {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  background: rgba(0, 43, 91, 0.8); /* semi-transparent navy */
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 6px;
+  z-index: 3;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.client-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-article p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Ensure main content sits below hero block */
+main {
+  padding-top: 100px;
+}
+
+/* ===== Sections (History & Adventure) ===== */
+section {
+  margin: 2rem auto;
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* Heading bars */
+section h2 {
+  background-color: #002b5b; /* navy */
+  color: white;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+
+/* Paragraphs */
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: flex-start; /* left-aligned */
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+
+footer p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialmedia a img {
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 420px;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+    top: 10%;
+    padding: 0.8rem 0;
+  }
+
+  .hero-article {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    bottom: -70px;
+    padding: 1rem;
+  }
+
+  .client-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .hero-article p {
+    font-size: 1rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
