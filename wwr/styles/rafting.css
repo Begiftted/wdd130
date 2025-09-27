@@ -1,4 +1,13 @@
-/* ===== Reset ===== */
+:root {
+  --primary-color: #003366;
+  --secondary-color: #ffcc00;
+  --accent-color: #ffffff;
+  --body-font: Arial, Helvetica, sans-serif;
+  --heading-font: 'Trebuchet MS', sans-serif;
+  --text-color: #333;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,201 +15,138 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
+  font-family: var(--body-font);
+  color: var(--text-color);
   line-height: 1.6;
-  background-color: #fff;
 }
 
-/* ===== Header ===== */
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 header {
   display: flex;
-  flex-direction: column;   /* stack logo and nav vertically */
-  align-items: flex-start;  /* align left */
-  padding: 1rem 2rem;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.site-logo {
-  height: 70px;
-  width: auto;
-  object-fit: contain;
+header img {
+  max-width: 120px;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap; /* let nav wrap on small screens */
-  padding-left: 0;
-}
-
-header nav a {
+nav a {
+  margin: 0 0.5rem;
   text-decoration: none;
-  color: #002b5b;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+h1, h2 {
+  font-family: var(--heading-font);
 }
 
-/* ===== Hero Section ===== */
+section, article, nav, p {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+/* Hero Section */
 .hero {
   position: relative;
-  height: 520px;
-  overflow: hidden;
 }
 
-.hero-image {
-  position: absolute;
-  inset: 0;
+.hero img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  height: auto;
+  display: block;
 }
 
-/* Semi-transparent navy heading bar */
-.hero-heading {
+.hero h1 {
   position: absolute;
-  top: 15%;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 51, 102, 0.7);
+  color: var(--accent-color);
+  padding: 0.5rem 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
   left: 0;
   right: 0;
-  margin: 0;
-  background: rgba(0, 43, 91, 0.8); /* semi-transparent navy */
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  padding: 1rem 0;
-  z-index: 2;
-}
-
-/* Mission article block */
-.hero-article {
-  position: absolute;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1100px;
-  background: rgba(0, 43, 91, 0.8); /* semi-transparent navy */
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  border-radius: 6px;
-  z-index: 3;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.client-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.hero-article p {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Ensure main content sits below hero block */
-main {
-  padding-top: 100px;
-}
-
-/* ===== Sections (History & Adventure) ===== */
-section {
-  margin: 2rem auto;
-  max-width: 1100px;
-  text-align: center;
-}
-
-/* Heading bars */
-section h2 {
-  background-color: #002b5b; /* navy */
-  color: white;
-  padding: 1rem;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 0 1rem 0;
-}
-
-/* Paragraphs */
-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ===== Footer ===== */
-footer {
-  background: #fff;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: flex-start; /* left-aligned */
-  align-items: center;
+  background-color: rgba(0, 51, 102, 0.7);
+  color: var(--accent-color);
   padding: 1rem 2rem;
-  gap: 2rem;
+  border-radius: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-footer p {
-  margin: 0;
-  color: #333;
-  font-weight: 500;
+.hero article img {
+  float: right;
+  width: 120px;
+  margin-left: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.socialmedia {
-  display: flex;
-  gap: 1rem;
+/* History Section */
+section:nth-of-type(1) {
+  text-align: center;
 }
 
-.socialmedia a img {
-  width: 40px;
-  height: 40px;
+section:nth-of-type(1) h2 {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  width: 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* ===== Responsive Tweaks ===== */
-@media (max-width: 768px) {
-  .hero {
-    height: 420px;
-  }
+section:nth-of-type(1) p {
+  color: var(--text-color);
+  padding: 0 1rem;
+  text-align: left;
+}
 
-  .hero-heading {
-    font-size: 2rem;
-    top: 10%;
-    padding: 0.8rem 0;
-  }
+/* Adventure Section */
+section:nth-of-type(2) {
+  text-align: center;
+}
 
-  .hero-article {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    bottom: -70px;
-    padding: 1rem;
-  }
+section:nth-of-type(2) h2 {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  width: 100%;
+  padding: 0.5rem 0;
+  text-align: center;
+}
 
-  .client-image {
-    width: 90px;
-    height: 90px;
-  }
+/* Happy Client Section */
+.hero article {
+  background-color: rgba(0, 51, 102, 0.7);
+  color: var(--accent-color);
+}
 
-  .hero-article p {
-    font-size: 1rem;
-  }
+/* Footer */
+footer {
+  text-align: left;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
 
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 30px;
+  margin: 0 0.5rem;
 }
