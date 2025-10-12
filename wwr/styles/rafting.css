@@ -395,3 +395,371 @@ footer {
 .socialmedia img {
   width: 30px;
 }
+
+
+/* ================================================= */
+/* ===== TRIPS PAGE SPECIFIC STYLING ================= */
+/* ================================================= */
+
+/* Hero Section Styles */
+#trips-page-body .trips-hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#trips-page-body .trips-hero img {
+    width: 100%;
+    height: 400px; /* Fixed height for a stronger visual */
+    object-fit: cover;
+    display: block;
+}
+
+.hero-cta-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 51, 102, 0.85); /* Dark Primary Color w/ opacity */
+    color: var(--accent-color);
+    padding: 2rem 3rem;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 90%;
+}
+
+.hero-cta-box h1 {
+    font-size: 2em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cta-box p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1em;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Trips Table Styles */
+.trip-summary {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.trip-summary h2 {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.trip-summary table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-summary th, .trip-summary td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.trip-summary thead th {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+}
+
+.trip-summary tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+.trip-summary tbody tr:hover {
+    background-color: #ffe8a8; /* secondary color hover */
+}
+
+
+/* Trip Details Grid (Multi-Column Layout) */
+.trip-details {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.trip-details h2 {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trip-gallery-grid {
+    display: grid;
+    /* Create three equal columns for the trip cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.trip-card {
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--accent-color);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.trip-card h3 {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.75rem;
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.trip-card p {
+    padding: 1rem 1rem 0;
+}
+
+.trip-card ul {
+    list-style: none;
+    padding: 1rem 1rem 1.5rem;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.trip-card ul li {
+    margin-bottom: 5px;
+}
+
+
+/* ================================================= */
+/* ===== HOME PAGE SPECIFIC STYLING ================== */
+/* ================================================= */
+
+/* --- 1. Hero Section --- */
+.hero-home {
+    position: relative;
+    max-width: 100%; /* Ensures full width */
+    margin: 0 auto 2rem;
+    overflow: hidden;
+}
+
+.hero-home img {
+    width: 100%;
+    height: 60vh; /* Viewport height for a large hero image */
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8); /* Darken image slightly */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Subtle darkening for text contrast */
+}
+
+.hero-headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color);
+    font-size: 3.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-family: var(--heading-font);
+    z-index: 10;
+    max-width: 80%;
+}
+
+/* --- 3. Call to Action Banner --- */
+.cta-banner {
+    text-align: center;
+    background-color: var(--secondary-color); /* Yellow background */
+    color: var(--primary-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-banner h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Ensure heading is the primary color */
+    background: none; /* Override general h2 style */
+}
+
+.trips-cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.trips-cta-button:hover {
+    background-color: #004d99; /* Darker primary color on hover */
+}
+
+/* --- 4. Content Grid Layout --- */
+.home-grid-section {
+    padding: 1rem;
+    text-align: center;
+}
+
+.home-grid-section .section-title {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-grid {
+    display: grid;
+    /* Create a creative 2-column layout */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto; /* Two rows that size automatically */
+    gap: 20px;
+    text-align: left;
+}
+
+.grid-item {
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+}
+
+/* Span the mission text across two columns in the first row */
+.mission-text {
+    grid-column: 1 / 2;
+    background-color: var(--accent-color);
+    /*border: 1px solid #ccc; */
+}
+
+/* Image 1 in the grid */
+.content-grid .image-item:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding: 0;
+    border: none;
+}
+
+/* Image 2 in the grid */
+.content-grid .image-item:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 0;
+    border: none;
+}
+
+.content-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+.features-text {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: var(--accent-color);
+    /*border: 1px solid #ccc; */
+}
+
+.grid-item h3 {
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* --- 2. Newsletter Form --- */
+.newsletter-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    background: none;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-field label {
+    font-weight: bold;
+    min-width: 80px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.form-field input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
